@@ -33,7 +33,7 @@ padding: 40px;
 .search-form-button:hover {
    background-color: white;
    color: #393939;
-   transition: 0.5s;
+   transition: all 200ms ease-in-out;
 }
 
 h1 { 
