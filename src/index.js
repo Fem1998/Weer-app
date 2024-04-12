@@ -2,8 +2,20 @@ function updateWeatherInfo (response) {
     let temperatureElement = document.querySelector("#temperature");
     let temperature = response.data.temperature.current;
     let cityElement = document.querySelector("#city");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windSpeedElement = document.querySelector("#wind-speed");
+    let feelsLikeElement = document.querySelector("#feels-like");
+    let feels_like = response.data.temperature.feels_like;
+
+console.log(response.data);
+//data.condition.icon
 
     cityElement.innerHTML = response.data.city;
+    descriptionElement.innerHTML = response.data.condition.description;
+    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+    windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+    feelsLikeElement.innerHTML = Math.round(feels_like);
     temperatureElement.innerHTML = Math.round(temperature);
     
 }
@@ -17,7 +29,6 @@ axios.get(apiUrl).then(updateWeatherInfo);
 function handleSearchSubmit (event) {
     event.preventDefault();
     let searchInput = document.querySelector("#search-form-input");
-   
     
     searchCity (searchInput.value);
 }
