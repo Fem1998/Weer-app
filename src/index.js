@@ -9,7 +9,7 @@ function updateWeatherInfo (response) {
     let feels_like = response.data.temperature.feels_like;
     let timeElement = document.querySelector("#time");
     let date = new Date(response.data.time * 1000);
-
+    let iconElement = document.querySelector("#icon");
 
     timeElement.innerHTML = formatDate(date);
     cityElement.innerHTML = response.data.city;
@@ -18,6 +18,8 @@ function updateWeatherInfo (response) {
     windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     feelsLikeElement.innerHTML = Math.round(feels_like);
     temperatureElement.innerHTML = Math.round(temperature); 
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"
+    />`
 }
 
 function formatDate(date) {
@@ -40,12 +42,7 @@ function formatDate(date) {
     }
 
     return `${day} ${hours}:${minutes}`
-
-
 }
-
-
-
 
 function searchCity(city) {
 let apiKey = "4d33c994abft304dof4ebf7b3ced4b9b";
