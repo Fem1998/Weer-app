@@ -90,6 +90,25 @@ main {
     font-size: 22px;
 }
 
+.weather-forecast {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.weather-forecast-date {
+    color: #393939;
+    font-size: 14px;
+}
+
+.weather-app-temperatures {
+    color: #393939;
+    font-size: 12px;
+}
+
+.weather-app-forecast-min{
+    color: #606470;
+}
+
 footer {
     font-size: small;
     padding: 20px 0px 0px 0px;
