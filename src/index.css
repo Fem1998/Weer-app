@@ -90,7 +90,8 @@ main {
     font-size: 22px;
 }
 
-.weather-forecast {
+.weather-forecast-day {
+    color: #393939;
     margin-top: 5px;
     margin-bottom: 30px;
 }
@@ -100,13 +101,13 @@ main {
     font-size: 14px;
 }
 
-.weather-app-temperatures {
+.weather-forecast-temperatures {
     color: #393939;
     font-size: 12px;
 }
 
-.weather-app-forecast-min{
-    color: #606470;
+.weather-forecast {
+    align-content: center;
 }
 
 footer {
